@@ -1,9 +1,6 @@
 import burgir from "./hamburger.svg";
 import place from "./restaurantImg.jpg";
-import { createDiv } from "..";
-
-const content = document.querySelector("#content");
-content.classList.add("home");
+import { createDiv, content} from "../index.js";
 
 const imgDiv = createDiv();
 imgDiv.classList.add("img-div");
@@ -24,9 +21,8 @@ const h1 = document.createElement("h1");
 h1.textContent = "Welcome!";
 textDiv.appendChild(h1);
 
-function home() {
+export function home() {
   content.appendChild(imgDiv);
   content.appendChild(textDiv);
+  content.classList.add('home');
 }
-
-export { home };
